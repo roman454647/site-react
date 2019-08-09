@@ -1,0 +1,109 @@
+@import './_variables.scss';
+
+.wrapper-menu {
+
+  background-image: url('../image/menu-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.section-menu {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 80px 0 100px;
+
+  img {
+    margin-left: 0;
+  }
+
+  .divider3 {
+    justify-content: center;
+    margin-left: 25%;
+    padding-top: 15px;
+  }
+
+  .tittle {
+    text-align: center;
+    font-size: 36px;
+    color: $budha-gold;
+  }
+
+
+  .special {
+    margin-top: 15px;
+    height: 70%;
+    border: 2px solid rgba(204, 153, 0, 0.3);
+    line-height: 20px;
+  }
+
+  h1 {
+    margin-left: 10px;
+    padding-top: 17px;
+    font-size: 21px;
+    color: #cc9900;
+  }
+
+  .price {
+    text-align: right;
+    margin-right: auto;
+    float: right;
+  }
+
+  h2 {
+    font-size: 12px;
+    margin-top: -20px;
+    margin-left: 92%;
+    background-image: url('../image/spec.png');
+    color: $white;
+  }
+
+  p {
+    padding-top: 10px;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
+
+.price {
+  margin-right: 0;
+}
+
+.Salads {
+  padding-top: 75px;
+}
+
+.Dishes {
+  padding-top: 70px;
+}
+
+
+.right-part {
+  margin-left: 170px;
+}
+@media screen and (max-width: $medium-screen) {
+  .section-menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-ingredients {
+    .divider3 {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+
+  .right-part {
+    margin-left: 0;
+    padding-top: 20px;
+  }
+}

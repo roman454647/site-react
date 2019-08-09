@@ -1,0 +1,74 @@
+@import './_variables.scss';
+
+.info {
+  display: flex;
+  padding: 50px 60px 70px;
+  text-align: center;
+  background-attachment: fixed;
+  background-image: url('../image/background-foo.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: bold;
+    color: $white;
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: $white;
+
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.About {
+  margin-left: 15%;
+}
+
+.open {
+  margin-left: 160px;
+}
+
+.Our-Location {
+  margin-left: 190px;
+
+  img {
+    margin-top: 10px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: $medium-screen) {
+  .info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0;
+    text-align: center;
+
+
+    div {
+      margin-left: 0;
+    }
+  }
+
+  .About {
+    p {
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+}

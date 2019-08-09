@@ -1,0 +1,82 @@
+@import './_variables.scss';
+
+.wrapper-rewiews {
+  background-image: url('../image/bg_slider.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.Rewiews {
+  background-image: url('../image/bg6_slider.png');
+  width: 100%;
+  background-position: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  margin-left: 20%;
+
+  padding-top: 130px;
+  padding-bottom: 100px;
+
+}
+
+.rewiew {
+  padding-top: 78px;
+  padding-bottom: 100px;
+
+  color: $white;
+
+  img {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  p {
+    padding-bottom: 50px;
+    font-size: 25px;
+    line-height: 2;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (max-width: $medium-screen) {
+  .Rewiews {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+  }
+
+  .rewiew {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+@media screen and (max-width: $small-screen) {
+  .wrapper-rewiews {
+    margin-left: 0;
+    text-align: center; 
+  }
+
+  .Rewiews {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    background-position: center;
+
+
+    .rewiew {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}

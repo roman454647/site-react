@@ -1,0 +1,48 @@
+@import './_variables.scss';
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 10px 0 100px;
+
+
+  .buttons {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 33px;
+    max-width: 100%;
+
+
+    input {
+      padding: 0 15px;
+    }
+
+    .black {
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+
+
+    .white {
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  img {
+    max-width: 100%;
+    text-align: center;
+    padding: 25px;
+  }
+
+  h1 {
+    text-align: center;
+    color: $white;
+    font-size: 100px;
+    font-weight: bold;
+  }
+}

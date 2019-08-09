@@ -1,0 +1,96 @@
+@import './_variables.scss';
+
+.wrapper {
+  background-attachment: fixed;
+  background-image: url('../image/bg_about.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-about {
+  display: flex;
+  width: 70%;
+  padding: 60px 0 20px;
+  margin: 0 auto;
+}
+
+.about-right {
+  margin-left: 5%;
+}
+
+.about-left {
+  margin-top: 35px;
+  margin-left: 11%;
+
+
+  h1 {
+    padding-bottom: 13px;
+    font-size: 36px;
+    color: $budha-gold;
+    text-align: center;
+  }
+
+  p {
+    margin: 30px 0 50px;
+    font-size: 16px;
+    line-height: 2;
+    text-align: center;
+  }
+}
+
+
+.mw-100 {
+  min-width: 100%;
+}
+
+img {
+  margin-left: 0;
+  text-align: center;
+}
+
+.cook {
+  padding-top: 18px;
+  margin-left: 33%;
+}
+@media screen and (max-width: 1414px) {
+  .About {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1278px) {
+  .mw-100 {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .section-about {
+    flex-direction: column-reverse;
+  }
+
+  .about-left {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .about-right {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  p {
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .info {
+    div {
+      margin-left: 0;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .mv-100 {
+      width: 60%;
+    }
+  }
+}
