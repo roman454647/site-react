@@ -1,25 +1,41 @@
 @import './_variables.scss';
 
 .wrapper-ingredients {
-  background-attachment: fixed;
-  background-image: url('../image/bg3.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: fixed url('../image/bg3.png') no-repeat center center / cover;
 }
 
 .section-ingredients {
-  padding-top: 170px;
-  padding-bottom: 150px;
-  background-image: url('../image/bg4.png');
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("../image/bg4.png");
   background-position: 73%;
   background-repeat: no-repeat;
 
+  @media screen and (max-width: $l-screen) {
+    background-position: 80%;
+  }
+
+  @media screen and (max-width: $wide-medium-screen) {
+    background-position: 83%;
+  }
+
+  @media screen and (max-width: $medium-screen) {
+    background-position: center;
+  }
+
   h1 {
-    font-size: 36px;
+    font-size: 2rem;
     padding-bottom: 17px;
     color: $white;
-    margin-left: 59.5%;
+    text-align: center;
+    padding-left: 35%;
+
+    @media screen and (max-width: $medium-screen) {
+      text-align: center;
+      padding-left: 0;
+    }
   }
 
   p {
@@ -27,65 +43,37 @@
     font-size: 16px;
     padding-top: 30px;
     color: $white;
-    margin-left: 55%;
-  }
+    text-align: center;
+    margin-left: 35%;
 
-}
-
-
-
-.divider2 {
-  justify-content: center;
-  max-width: 100%;
-  margin-left: 60%;
-}
-
-
-.product_image {
-  padding-top: 80px;
-  margin-left: 55%;
-
-  img {
-    padding-left: 15px;
-    margin-left: 0;
-  }
-}
-
-
-@media screen and (max-width: 1660px) {
-  .section-ingredients {
-    background-position: 80%;
-  }
-}
-@media screen and (max-width: 1414px) {
-  .section-ingredients {
-    background-position: 83%;
-  }
-}
-@media screen and (max-width: 1278px) {
-  .section-ingredients {
-    background-position: center;
-
-
-    .divider2 {
-      text-align: center;
-      margin-left: 0;
-    }
-
-    p {
+    @media screen and (max-width: $medium-screen) {
       text-align: center;
       padding-left: 3px;
       margin-left: 0;
     }
+  }
+}
 
-    h1 {
-      text-align: center;
-      margin-left: 0;
+  .divider-wrapper {
+    max-width: 300px;
+    margin-left: 60%;
+
+    @media screen and (max-width: $medium-screen) {
+      justify-content: center;
+
     }
   }
 
+  .product_image {
+    padding-top: 80px;
+    margin-left: 55%;
 
-
+    img {
+      padding-left: 15px;
+      margin-left: 0;
+    }
+  }
+@media screen and (max-width: $medium-screen) {
   .wrapper-ingredients {
     div {
       text-align: center;

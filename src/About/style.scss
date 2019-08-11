@@ -1,17 +1,13 @@
-@import './_variables.scss';
+@import "./_variables.scss";
 
-.wrapper {
-  background-attachment: fixed;
-  background-image: url('../image/bg_about.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.wrapper-about {
+  background: fixed url("../image/bg_about.png") no-repeat center center / cover;
 }
 
 .section-about {
   display: flex;
   width: 70%;
-  padding: 60px 0 20px;
+  padding: 20px 0 20px;
   margin: 0 auto;
 }
 
@@ -23,44 +19,47 @@
   margin-top: 35px;
   margin-left: 11%;
 
-
   h1 {
-    padding-bottom: 13px;
-    font-size: 36px;
+    padding-bottom: 0px;
+    font-size: 4rem;
     color: $budha-gold;
     text-align: center;
   }
 
   p {
     margin: 30px 0 50px;
-    font-size: 16px;
-    line-height: 2;
+    font-size: 1rem;
+    line-height: 1.5;
     text-align: center;
   }
 }
 
-
-.mw-100 {
+.dish-plate {
   min-width: 100%;
+  padding-top: 100px;
+  margin-left: 40px;
+
+  @media screen and (max-width: $medium-screen) {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 60%;
+  }
 }
 
-img {
+.divider {
   margin-left: 0;
   text-align: center;
 }
 
 .cook {
-  padding-top: 18px;
-  margin-left: 33%;
+  padding-top: 0;
+  margin-left: 20%;
 }
-@media screen and (max-width: 1414px) {
+@media screen and (max-width: $wide-medium-screen) {
   .About {
-    margin-left: 0;
-  }
-}
-@media screen and (max-width: 1278px) {
-  .mw-100 {
-    max-width: 100%;
     margin-left: 0;
   }
 
@@ -68,11 +67,7 @@ img {
     flex-direction: column-reverse;
   }
 
-  .about-left {
-    margin-left: 0;
-    text-align: center;
-  }
-
+  .about-left ,
   .about-right {
     margin-left: 0;
     text-align: center;
@@ -86,11 +81,6 @@ img {
   .info {
     div {
       margin-left: 0;
-    }
-  }
-  @media screen and (max-width: 900px) {
-    .mv-100 {
-      width: 60%;
     }
   }
 }

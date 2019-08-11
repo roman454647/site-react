@@ -1,31 +1,40 @@
 @import './_variables.scss';
 
 .wrapper-rewiews {
-  background-image: url('../image/bg_slider.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background: fixed url('../image/bg_slider.png') no-repeat center center / cover;
 }
 
 .Rewiews {
-  background-image: url('../image/bg6_slider.png');
-  width: 100%;
-  background-position: center;
+  max-width: 900px;
+  background:  url('../image/bg6_slider.png') no-repeat center ;
   text-align: center;
-  background-repeat: no-repeat;
   margin-left: 20%;
-
   padding-top: 130px;
   padding-bottom: 100px;
 
+  @media screen and (max-width: $medium-screen) {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+  }
+
+  @media screen and (max-width: $small-screen) {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    background-position: center;
+  }
 }
 
 .rewiew {
   padding-top: 78px;
   padding-bottom: 100px;
-
   color: $white;
+
+  @media screen and (max-width: $medium-screen) {
+      margin-left: 0;
+      text-align: center;
+  }
 
   img {
 
@@ -34,49 +43,28 @@
   }
 
   h1 {
-    font-size: 36px;
+    font-size: 2rem;
   }
 
   p {
     padding-bottom: 50px;
-    font-size: 25px;
+    font-size: 1.5rem;
     line-height: 2;
+
+    @media screen and (max-width: $small-screen) {
+      font-size: 1rem;
+    }
   }
 
   h2 {
-    font-size: 18px;
+    font-size: 1.3rem;
   }
 }
 
 
-@media screen and (max-width: $medium-screen) {
-  .Rewiews {
-    display: flex;
-    justify-content: center;
-    margin-left: 10%;
-  }
-
-  .rewiew {
-    margin-left: 0;
-    text-align: center;
-  }
-}
 @media screen and (max-width: $small-screen) {
   .wrapper-rewiews {
     margin-left: 0;
-    text-align: center; 
-  }
-
-  .Rewiews {
-    display: flex;
-    justify-content: center;
-    margin-left: 0;
-    background-position: center;
-
-
-    .rewiew {
-      margin-left: 0;
-      text-align: center;
-    }
+    text-align: center;
   }
 }

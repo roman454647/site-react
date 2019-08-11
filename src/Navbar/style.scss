@@ -18,23 +18,20 @@ nav {
 
 .navigation {
   a {
+    padding: 22px 24px;
+    font-family: serif;
+    font-size: 21px;
+    font-weight: bold;
     color: $white;
     text-align: center;
-    padding: 22px 24px;
-    font-size: 21px;
-    font-family: serif;
-    font-weight: bold;
+
+
 
     &:hover {
       border-top: 3px solid $ash;
     }
   }
 
-  .span-logo {
-    &:hover {
-      filter: sepia(1);
-    }
-  }
 
   .icon {
     display: none;
@@ -68,10 +65,11 @@ nav {
         text-align: left;
 
         .icon {
-          color: $white;
           position: absolute;
           top: -50px;
           right: -200px;
+          color: $white;
+
         }
       }
     }

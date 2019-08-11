@@ -4,12 +4,7 @@
   display: flex;
   padding: 50px 60px 70px;
   text-align: center;
-  background-attachment: fixed;
-  background-image: url('../image/background-foo.png');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  background: fixed url('../image/background-foo.png') no-repeat center center / cover;
 
   h1 {
     margin-bottom: 20px;
@@ -31,7 +26,7 @@
   }
 }
 
-.About {
+.About-footer {
   margin-left: 15%;
 }
 
@@ -67,7 +62,7 @@
 
   .About {
     p {
-      font-size: 13px;
+      font-size: 1rem;
       text-align: center;
     }
   }

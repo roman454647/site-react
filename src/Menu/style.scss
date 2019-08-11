@@ -1,12 +1,7 @@
 @import './_variables.scss';
 
 .wrapper-menu {
-
-  background-image: url('../image/menu-bg.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+  background: fixed url('../image/menu-bg.png') no-repeat center center / cover;
 }
 
 .section-menu {
@@ -17,6 +12,15 @@
   justify-content: center;
   padding: 80px 0 100px;
 
+
+  @media screen and (max-width: $medium-screen) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+  }
+
+
   img {
     margin-left: 0;
   }
@@ -24,38 +28,37 @@
   .divider3 {
     justify-content: center;
     margin-left: 25%;
-    padding-top: 15px;
+    padding-top: 0;
   }
 
-  .tittle {
+  .title {
     text-align: center;
-    font-size: 36px;
+    font-size: 2rem;
     color: $budha-gold;
   }
 
 
   .special {
-    margin-top: 15px;
+    margin-top: 0;
     height: 70%;
-    border: 2px solid rgba(204, 153, 0, 0.3);
+    border: 2px solid $budha-border;
     line-height: 20px;
   }
 
   h1 {
     margin-left: 10px;
-    padding-top: 17px;
-    font-size: 21px;
-    color: #cc9900;
+    padding-top: 20px;
+    font-size: 1.5rem;
+    color: $budha-gold;
   }
 
   .price {
-    text-align: right;
-    margin-right: auto;
-    float: right;
+    display: flex;
+    justify-content: flex-end;
   }
 
   h2 {
-    font-size: 12px;
+    font-size: 0.8rem;
     margin-top: -20px;
     margin-left: 92%;
     background-image: url('../image/spec.png');
@@ -63,10 +66,8 @@
   }
 
   p {
-    padding-top: 10px;
-    font-size: 16px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    font-size: 1rem;
+    padding: 10px;
   }
 }
 
@@ -86,15 +87,9 @@
 
 
 .right-part {
-  margin-left: 170px;
+  margin-left: 100px;
 }
 @media screen and (max-width: $medium-screen) {
-  .section-menu {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
   .section-ingredients {
     .divider3 {
       margin-left: 0;
