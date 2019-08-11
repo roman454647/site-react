@@ -1,2 +1,2 @@
 # site-react
-site for  Lmbda restorant onreact
+site for  Lambda restorant on React
