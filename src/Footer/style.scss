@@ -1,4 +1,4 @@
-@import './_variables.scss';
+@import '../variables/_variables.scss';
 
 .info {
   display: flex;
@@ -27,7 +27,7 @@
 }
 
 .About-footer {
-  margin-left: 15%;
+  margin-left: 20%;
 }
 
 .open {

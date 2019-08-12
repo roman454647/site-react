@@ -3,7 +3,5 @@
   "extends": "eslint-config-airbnb",
   "env": {
     "browser": true
-    }
-
-
+    },
 }

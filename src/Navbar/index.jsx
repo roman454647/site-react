@@ -1,29 +1,66 @@
-import React from 'react';
-import './style.scss';
+import React, { Component, Fragment } from 'react';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { logoutUser } from '../actions/authentication';
 import logo from '../image/Logo.png';
-import navbarList from '../navbarList';
+import './style.scss';
 
+class Navbar extends Component {
+  onLogout(e) {
+    e.preventDefault();
+    this.props.logoutUser(this.props.history);
+  }
+  render() {
+        const {isAuthenticated, user} = this.props.auth;
+        const authLinks = (
+            <Fragment>
+              <a href=""  onClick={this.onLogout.bind(this)}>
+                    <img src={user.avatar} alt={user.name} title={user.name}
+                        style={{ width: '25px', marginRight: '5px'}} />
+                            Logout
+              </a>
+              <Link to='/about-user'>
+                 {user.name}
+              </Link>
+            </Fragment>
+        )
 
-function Navbar() {
-  const navbarL = navbarList.map(navlist => (
-    <a key={navlist.key} href={navlist.page_name}>{navlist.name}</a>
-  ));
+      const guestLinks = (
+        <Fragment>
+          <Link className="nav-link" to="/login">Sign in</Link>
+          <Link className="nav-link" to="/register">Sign Up</Link>
+        </Fragment>
+      )
 
-  return (
+        return(
     <header>
-      <div className="header_logo">
-        <img src={logo} alt="header_logo1" />
-      </div>
+     <div className="header_logo">
+      <img src={logo} alt="header_logo1" />
+     </div>
       <nav>
-        <div id="navig" className="navigation">
-          {navbarL}
-          <a href="facebook.com" id="navbar" className="icon">
-            &#9776;
-          </a>
+      <div id="navig" className="navigation">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Ingredients">Ingredients</a>
+        <a href="#Menu">Menu</a>
+        <a href="#Book">Book</a>
+        <a href="#Rewiews">Rewiews</a>
+          {isAuthenticated ? authLinks : guestLinks}
         </div>
       </nav>
-    </header>
-  );
+
+   </header>
+        )
+    }
+}
+Navbar.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
 }
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+    auth: state.auth
+})
+
+export default connect(mapStateToProps, { logoutUser })(withRouter(Navbar));

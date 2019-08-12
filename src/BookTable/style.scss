@@ -1,4 +1,4 @@
-@import "./_variables.scss";
+@import '../variables/_variables.scss';
 
 .book_wrapper {
   background: fixed url('../image/form-bg.png') no-repeat center center / cover;
@@ -21,25 +21,25 @@
 .left-side {
   @media screen and (max-width: 1414px) {
     align-items: center;
-    margin-left: 0;
   }
 
   @media screen and (max-width: 1278px) {
-    max-width: 70%;
+    max-width: 50%;
+
   }
 
   @media screen and (max-width: 900px) {
-    max-height: 60%;
+    display: none;
   }
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   max-height: 80%;
-  padding: 120px 0 100px;
-  margin-left: 0;
+  padding: 100px 0 ;
+  margin-left: 0 auto;
 
   img {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 }
 
