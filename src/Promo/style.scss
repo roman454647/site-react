@@ -5,7 +5,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  padding: 10px 0 100px;
+  padding: 10px 0 50px;
 
 
   .buttons {
@@ -25,23 +25,47 @@
     }
 
 
-    .see-the-menu {
+    .see-all-dishes {
       &:hover {
         opacity: 1 / 3;
       }
     }
   }
+}
 
-  img {
-    max-width: 100%;
-    padding: 25px;
-    text-align: center;
-  }
+.book-table {
+  padding: 10px 20px;
+  font-family: Arial;
+  font-size: 1.4rem;
+  color: $white;
+  text-decoration: none;
+  background: $black-low-opacity;
+  border-color: $black;
 
-  h1 {
-    font-size: 100px;
-    font-weight: bold;
-    color: $white;
-    text-align: center;
+  &:hover {
+    background: $black;
+ }
+}
+
+.see-all-dishes {
+  padding: 10px 20px;
+  margin-left: 20px;
+  font-family: Arial;
+  font-size: 1.4rem;
+  color: $white;
+  text-decoration: none;
+  background: $white-low-opacity;
+  border-radius: 0;
+
+
+  &:hover {
+    background: 0;
   }
 }
+
+h1 {
+  font-size: 100px;
+  font-weight: bold;
+  color: $white;
+  text-align: center;
+  }

@@ -12,20 +12,24 @@ const Promo = () => (
     </h1>
 
     <div className="buttons">
-      <input
-        type="image"
+      <button
+        type="button"
         className="book-table"
         name="book-table"
         src={btnBlack}
         alt="book-table"
-      />
-      <input
-        type="image"
-        className="see-the-menu"
-        name="see-the-menu"
+      >
+      Book table
+      </button>
+      <button
+        type="button"
+        className="see-all-dishes"
+        name="see-all-dishes"
         src={btnWhite}
-        alt="see-the-menu"
-      />
+        alt="see-all-dishes"
+      >
+      See all dishes
+      </button>
     </div>
   </section>
 );

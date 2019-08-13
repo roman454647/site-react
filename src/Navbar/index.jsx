@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { logoutUser } from '../actions/authentication';
 import logo from '../image/Logo.png';
 import './style.scss';
+import navbarElement from './navbarList';
 
 class Navbar extends Component {
   onLogout(e) {
@@ -32,6 +33,10 @@ class Navbar extends Component {
           </Fragment>
       )
 
+      const navbarElements =  navbarElement.map(element =>
+        <a href ={element.page_name}>{element.name}</a>
+    );
+
         return(
   <header>
       <div className="header-logo">
@@ -39,12 +44,7 @@ class Navbar extends Component {
       </div>
       <nav>
        <div id="navig" className="navigation">
-           <a href="#Home">Home</a>
-           <a href="#About">About</a>
-           <a href="#Ingredients">Ingredients</a>
-           <a href="#Menu">Menu</a>
-           <a href="#Book">Book</a>
-           <a href="#Rewiews">Rewiews</a>
+           {navbarElements}
            {isAuthenticated ? authLinks : guestLinks}
          </div>
        </nav>

@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
 import jwtDecode from 'jwt-decode';
+import { push } from 'react-router-redux';
 import setAuthToken from './setAuthToken';
 import { setCurrentUser, logoutUser } from './actions/authentication';
 import store from './store';
@@ -17,8 +18,7 @@ if (localStorage.jwtToken) {
 
   const currentTime = Date.now() / 1000;
   if (decoded.exp < currentTime) {
-    store.dispatch(logoutUser());
-    window.location.href = '/login';
+    store.dispatch(logoutUser(push('/login')));
   }
 }
 
