@@ -14,75 +14,50 @@ header {
 nav {
   margin-top: 46px;
   margin-left: 12%;
+
+  @media screen and (max-width: $max-sm-screen) {
+    width: 100%;
+  }
+}
+
+.avatar {
+  width: 25px;
+  margin-right: 5px;
 }
 
 .navigation {
   a {
     padding: 22px 24px;
     font-family: serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: $white;
     text-align: center;
 
-
-
     &:hover {
       border-top: 3px solid $ash;
-    }
   }
 
-
-  .icon {
-    display: none;
-    color: $white;
-  }
-}
-
-@media screen and (max-width: 1278px) {
-  .navigation {
-    a {
+    @media screen and (max-width: $max-sm-screen) {
       display: none;
 
-      .icon {
-        display: block;
-        float: right;
-        margin-top: -29px;
-        font-size: 25px;
-        color: $white;
-        }
     }
+}
 
-    .responsive {
+  .responsive {
+    @media screen and (max-width: $max-sm-screen) {
       position: relative;
       top: 50px;
       left: -200px;
+      height: 340px;
+   }
 
-      a {
+    a {
+      @media screen and (max-width: $max-sm-screen) {
         display: block;
         float: none;
         text-align: left;
-
-        .icon {
-          position: absolute;
-          top: -50px;
-          right: -200px;
-          color: $white;
-
-        }
-      }
     }
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  header {
-    .navigation {
-      .responsive {
-        height: 340px;
-      }
-    }
-  }
+   }
+}
 }

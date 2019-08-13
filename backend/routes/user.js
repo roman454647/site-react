@@ -8,6 +8,7 @@ const validateRegisterInput = require('../validation/register');
 const validateLoginInput = require('../validation/login');
 
 const User = require('../models/User');
+const magicNumber = 3600;
 
 router.post('/register', function(req, res) {
 
@@ -17,7 +18,6 @@ router.post('/register', function(req, res) {
   } = validateRegisterInput(req.body);
 
   if (!isValid) {
-    console.log("error in 20 lines of code user.js")
     return res.status(400).json(errors);
   }
   User.findOne({
@@ -68,7 +68,6 @@ router.post('/login', (req, res) => {
   } = validateLoginInput(req.body);
 
   if (!isValid) {
-    console.log("71 lines of code")
     return res.status(400).json(errors);
   }
 
@@ -92,7 +91,7 @@ router.post('/login', (req, res) => {
               avatar: user.avatar
             }
             jwt.sign(payload, 'secret', {
-              expiresIn: 3600
+              expiresIn: magicNumber
             }, (err, token) => {
               if (err) console.error('There is some error in token', err);
               else {

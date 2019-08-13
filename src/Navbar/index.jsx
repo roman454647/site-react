@@ -16,9 +16,8 @@ class Navbar extends Component {
         const authLinks = (
             <Fragment>
               <a href=""  onClick={this.onLogout.bind(this)}>
-                    <img src={user.avatar} alt={user.name} title={user.name}
-                        style={{ width: '25px', marginRight: '5px'}} />
-                            Logout
+                 <img className='avatar' src={user.avatar} alt={user.name} title={user.name} />
+                 Logout
               </a>
               <Link to='/about-user'>
                  {user.name}
@@ -26,30 +25,29 @@ class Navbar extends Component {
             </Fragment>
         )
 
-      const guestLinks = (
-        <Fragment>
-          <Link className="nav-link" to="/login">Sign in</Link>
-          <Link className="nav-link" to="/register">Sign Up</Link>
-        </Fragment>
+        const guestLinks = (
+           <Fragment>
+              <Link className="nav-link" to="/login">Sign in</Link>
+              <Link className="nav-link" to="/register">Sign Up</Link>
+          </Fragment>
       )
 
         return(
-    <header>
-     <div className="header-logo">
-      <img src={logo} alt="header-logo" />
-     </div>
+  <header>
+      <div className="header-logo">
+       <img src={logo} alt="header-logo" />
+      </div>
       <nav>
-      <div id="navig" className="navigation">
-        <a href="#Home">Home</a>
-        <a href="#About">About</a>
-         <a href="#Ingredients">Ingredients</a>
-         <a href="#Menu">Menu</a>
-         <a href="#Book">Book</a>
-         <a href="#Rewiews">Rewiews</a>
-          {isAuthenticated ? authLinks : guestLinks}
-        </div>
-      </nav>
-
+       <div id="navig" className="navigation">
+           <a href="#Home">Home</a>
+           <a href="#About">About</a>
+           <a href="#Ingredients">Ingredients</a>
+           <a href="#Menu">Menu</a>
+           <a href="#Book">Book</a>
+           <a href="#Rewiews">Rewiews</a>
+           {isAuthenticated ? authLinks : guestLinks}
+         </div>
+       </nav>
    </header>
         )
     }

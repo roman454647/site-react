@@ -4,11 +4,10 @@ import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../actions/authentication';
-
+import './style.scss';
 
 class Login extends Component {
-
-    constructor() {
+   constructor() {
         super();
         this.state = {
             email: '',
@@ -53,17 +52,22 @@ class Login extends Component {
 
     render() {
         const {errors} = this.state;
+        const formControlEmail = classnames('form-control form-control-lg', {
+          'is-invalid': errors.password
+        })
+        const formControlPassword =classnames('form-control form-control-lg', {
+            'is-invalid': errors.password
+        })
+
         return(
-        <div className="container" style={{ marginTop: '50px', width: '700px'}}>
-            <h2 style={{marginBottom: '40px'}}>Login</h2>
+        <div className="container">
+            <h2>Login</h2>
             <form onSubmit={ this.handleSubmit }>
                 <div className="form-group">
                     <input
                     type="email"
                     placeholder="Email"
-                    className={classnames('form-control form-control-lg', {
-                        'is-invalid': errors.email
-                    })}
+                   className = {formControlEmail}
                     name="email"
                     onChange={ this.handleInputChange }
                     value={ this.state.email }
@@ -74,9 +78,7 @@ class Login extends Component {
                     <input
                     type="password"
                     placeholder="Password"
-                    className={classnames('form-control form-control-lg', {
-                        'is-invalid': errors.password
-                    })}
+                    className={formControlPassword}
                     name="password"
                     onChange={ this.handleInputChange }
                     value={ this.state.password }
