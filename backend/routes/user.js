@@ -103,7 +103,7 @@ router.post('/login', (req, res) => {
               }
             });
           } else {
-            console.log("incorrext password")
+            console.log("incorrect password")
             errors.password = 'Incorrect Password';
             return res.status(400).json(errors);
           }

@@ -35,17 +35,17 @@ class Navbar extends Component {
 
         return(
     <header>
-     <div className="header_logo">
-      <img src={logo} alt="header_logo1" />
+     <div className="header-logo">
+      <img src={logo} alt="header-logo" />
      </div>
       <nav>
       <div id="navig" className="navigation">
         <a href="#Home">Home</a>
         <a href="#About">About</a>
-        <a href="#Ingredients">Ingredients</a>
-        <a href="#Menu">Menu</a>
-        <a href="#Book">Book</a>
-        <a href="#Rewiews">Rewiews</a>
+         <a href="#Ingredients">Ingredients</a>
+         <a href="#Menu">Menu</a>
+         <a href="#Book">Book</a>
+         <a href="#Rewiews">Rewiews</a>
           {isAuthenticated ? authLinks : guestLinks}
         </div>
       </nav>

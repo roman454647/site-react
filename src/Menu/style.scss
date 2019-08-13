@@ -5,18 +5,19 @@
 }
 
 .section-menu {
-  width: 75%;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  width: 75%;
   padding: 80px 0 100px;
+  margin: 0 auto;
 
 
-  @media screen and (max-width: $medium-screen) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+
+  @media screen and (max-width: $max-sm-screen) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
   }
 
@@ -27,27 +28,27 @@
 
   .divider3 {
     justify-content: center;
-    margin-left: 25%;
     padding-top: 0;
-  }
+    margin-left: 25%;
+    }
 
   .title {
-    text-align: center;
     font-size: 2rem;
     color: $budha-gold;
+    text-align: center;
   }
 
 
   .special {
-    margin-top: 0;
     height: 70%;
+    margin-top: 0;
+    text-align: center;
     border: 2px solid $budha-border;
-    line-height: 20px;
   }
 
   h1 {
-    margin-left: 10px;
     padding-top: 20px;
+    margin-left: 10px;
     font-size: 1.5rem;
     color: $budha-gold;
   }
@@ -58,16 +59,16 @@
   }
 
   h2 {
-    font-size: 0.8rem;
     margin-top: -20px;
     margin-left: 92%;
-    background-image: url('../image/spec.png');
+    font-size: 4 / 5rem;
     color: $white;
+    background-image: url('../image/spec.png');
   }
 
   p {
-    font-size: 1rem;
     padding: 10px;
+    font-size: 1rem;
   }
 }
 
@@ -88,17 +89,17 @@
 
 .right-part {
   margin-left: 100px;
+  @media screen and (max-width: $max-sm-screen) {
+    padding-top: 20px;
+    margin-left: 0;
+  }
 }
-@media screen and (max-width: $medium-screen) {
-  .section-ingredients {
-    .divider3 {
+
+.section-ingredients {
+  .divider3 {
+    @media screen and (max-width: $max-sm-screen) {
       margin-left: 0;
       text-align: center;
     }
-  }
-
-  .right-part {
-    margin-left: 0;
-    padding-top: 20px;
   }
 }

@@ -6,7 +6,7 @@ header {
   margin-left: 0;
 }
 
-.header_logo {
+.header-logo {
   margin-top: 4px;
   margin-left: 20%;
 }
@@ -20,7 +20,7 @@ nav {
   a {
     padding: 22px 24px;
     font-family: serif;
-    font-size: 21px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: $white;
     text-align: center;
@@ -45,13 +45,12 @@ nav {
       display: none;
 
       .icon {
-        color: $white;
+        display: block;
         float: right;
         margin-top: -29px;
-        color: $black;
-        display: block;
         font-size: 25px;
-      }
+        color: $white;
+        }
     }
 
     .responsive {
@@ -60,8 +59,8 @@ nav {
       left: -200px;
 
       a {
-        float: none;
         display: block;
+        float: none;
         text-align: left;
 
         .icon {

@@ -2,6 +2,13 @@
 
 .wrapper-ingredients {
   background: fixed url('../image/bg3.png') no-repeat center center / cover;
+
+  div {
+    @media screen and (max-width: $max-sm-screen) {
+      margin: 0;
+      text-align: center;
+  }
+}
 }
 
 .section-ingredients {
@@ -9,75 +16,65 @@
   flex-direction: column;
   padding-top: 100px;
   padding-bottom: 100px;
-  background-image: url("../image/bg4.png");
-  background-position: 73%;
-  background-repeat: no-repeat;
+  background: url('../image/bg4.png') no-repeat 73%;
 
   @media screen and (max-width: $l-screen) {
     background-position: 80%;
   }
 
-  @media screen and (max-width: $wide-medium-screen) {
+  @media screen and (max-width: $max-md-screen) {
     background-position: 83%;
   }
 
-  @media screen and (max-width: $medium-screen) {
+  @media screen and (max-width: $max-sm-screen) {
     background-position: center;
   }
 
   h1 {
-    font-size: 2rem;
     padding-bottom: 17px;
+    padding-left: 35%;
+    font-size: 2rem;
     color: $white;
     text-align: center;
-    padding-left: 35%;
 
-    @media screen and (max-width: $medium-screen) {
-      text-align: center;
+    @media screen and (max-width: $max-sm-screen) {
       padding-left: 0;
+      text-align: center;
     }
   }
 
   p {
-    line-height: 1.5;
-    font-size: 16px;
     padding-top: 30px;
+    margin-left: 35%;
+    font-size: 1rem;
+    line-height: 1.5;
     color: $white;
     text-align: center;
-    margin-left: 35%;
 
-    @media screen and (max-width: $medium-screen) {
-      text-align: center;
+    @media screen and (max-width: $max-sm-screen) {
       padding-left: 3px;
       margin-left: 0;
-    }
-  }
-}
-
-  .divider-wrapper {
-    max-width: 300px;
-    margin-left: 60%;
-
-    @media screen and (max-width: $medium-screen) {
-      justify-content: center;
-
-    }
-  }
-
-  .product_image {
-    padding-top: 80px;
-    margin-left: 55%;
-
-    img {
-      padding-left: 15px;
-      margin-left: 0;
-    }
-  }
-@media screen and (max-width: $medium-screen) {
-  .wrapper-ingredients {
-    div {
       text-align: center;
-      margin: 0;
     }
   }
 }
+
+.divider-wrapper {
+  max-width: 300px;
+  margin-left: 60%;
+
+  @media screen and (max-width: $max-sm-screen) {
+    justify-content: center;
+
+    }
+  }
+
+.product-image {
+  padding-top: 80px;
+  margin-left: 55%;
+
+  img {
+    padding-left: 15px;
+    margin-left: 0;
+    }
+  }

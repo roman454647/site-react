@@ -25,12 +25,10 @@ if (localStorage.jwtToken) {
 const App = () => (
   <Provider store={store}>
     <Router>
-      <div>
-        <Route exact path="/" component={MainComponent} />
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/about-user" component={AboutUser} />
-      </div>
+      <Route exact path="/" component={MainComponent} />
+      <Route exact path="/register" component={Register} />
+      <Route exact path="/login" component={Login} />
+      <Route exact path="/about-user" component={AboutUser} />
     </Router>
   </Provider>
 );

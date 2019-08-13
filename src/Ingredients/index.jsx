@@ -5,7 +5,7 @@ import bread from '../image/image.png';
 import cari from '../image/image1.png';
 import wheat from '../image/image2.png';
 
-const Ingredients = () => (
+export default () => (
   <section id="ingredients" className="wrapper-ingredients">
     <div className="section-ingredients">
       <h1>Fine ingredient</h1>
@@ -23,7 +23,7 @@ const Ingredients = () => (
         <br />
         Stop in today and check us out!
       </p>
-      <div className="product_image">
+      <div className="product-image">
         <img src={bread} alt="bread" />
         <img src={cari} alt="cari" />
         <img src={wheat} alt="wheat" />
@@ -31,5 +31,3 @@ const Ingredients = () => (
     </div>
   </section>
 );
-
-export default Ingredients;

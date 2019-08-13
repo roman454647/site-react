@@ -5,16 +5,16 @@ import image4 from '../image/image4.png';
 import divider4 from '../image/Divider4.png';
 import bookNow from '../image/Book now.png';
 
-const BookTable = () => (
-  <section id="book" className="book_wrapper">
-    <div className="book_form">
+export default () => (
+  <section id="book" className="book-wrapper">
+    <div className="book-form">
       <div className="left-side">
-        <img src={image3} alt="nuts with chery" />
+        <img src={image3} alt="nuts with cherry" />
         <img src={image4} alt="meat with rise" />
       </div>
       <div className="right-side">
         <h1>Just the right food</h1>
-        <img src={divider4} alt="div4" />
+        <img src={divider4} alt="divider" />
         <p>
           If you’ve been to one of our restaurants, you’ve seen – and tasted
           <br />
@@ -24,7 +24,6 @@ const BookTable = () => (
         </p>
 
         <p>
-          {''}
           <br />
           Delicious Lambda cakes, muffins, and gourmet coffees make
           <br />
@@ -34,8 +33,8 @@ const BookTable = () => (
         </p>
 
         <form name="bookform" action="#" method="post">
-          <div className="form_inputs">
-            <div className="right_inputs">
+          <div className="form-inputs">
+            <div className="right-inputs">
               <label htmlFor="name">
                 Name
                 <input type="text" placeholder="Name*" id="name" />
@@ -45,27 +44,27 @@ const BookTable = () => (
                 <input type="text" placeholder="Email adress" id="email" />
               </label>
             </div>
-            <div className="left_inputs">
+            <div className="left-inputs">
               <label htmlFor="date">
                 Date
                 <input type="date" placeholder="Date" id="date" />
               </label>
-              <label htmlFor="party_numbers">
+              <label htmlFor="party-numbers">
                 Party Numbers
                 <input
                   type="text"
                   placeholder="Party Numbers*"
-                  id="party_numbers"
+                  id="party-numbers"
                 />
               </label>
             </div>
           </div>
-          <div className="button_block">
+          <div className="button-block">
             <input
               type="image"
               src={bookNow}
               value="Book now!"
-              alt="bok_now_button"
+              alt="book now button"
             />
           </div>
         </form>
@@ -73,5 +72,3 @@ const BookTable = () => (
     </div>
   </section>
 );
-
-export default BookTable;

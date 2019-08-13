@@ -6,6 +6,15 @@
   text-align: center;
   background: fixed url('../image/background-foo.png') no-repeat center center / cover;
 
+
+  @media screen and (max-width: $max-sm-screen) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0;
+    text-align: center;
+}
+
   h1 {
     margin-bottom: 20px;
     font-size: 21px;
@@ -15,7 +24,7 @@
 
   p {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
     color: $white;
 
@@ -27,15 +36,15 @@
 }
 
 .About-footer {
-  margin-left: 20%;
+  margin-left: 25%;
 }
 
 .open {
-  margin-left: 160px;
+  margin-left: 100px;
 }
 
 .Our-Location {
-  margin-left: 190px;
+  margin-left: 100px;
 
   img {
     margin-top: 10px;
@@ -46,22 +55,16 @@
   }
 }
 
-@media screen and (max-width: $medium-screen) {
-  .info {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+
+div {
+  @media screen and (max-width: $max-sm-screen) {
     margin-left: 0;
-    text-align: center;
-
-
-    div {
-      margin-left: 0;
     }
   }
 
-  .About {
-    p {
+.About {
+  p {
+    @media screen and (max-width: $max-sm-screen) {
       font-size: 1rem;
       text-align: center;
     }
