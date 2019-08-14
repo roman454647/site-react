@@ -17,7 +17,7 @@ const Menu = () => (
           <PartOfMenu menu={SalatList} />
         </div>
 
-        <div className="Salads">
+        <div className="salads">
           <h1 className="title">Salads</h1>
           <img className="divider3" src={menuDivider} alt="divider3" />
           <PartOfMenu menu={StarterList} />
@@ -26,13 +26,13 @@ const Menu = () => (
 
 
       <div className="right-part">
-        <div className="Starters">
+        <div className="starters">
           <h1 className="title">Starters</h1>
           <img className="divider3" src={menuDivider} alt="divider3" />
           <PartOfMenu menu={AppetisersList} />
         </div>
 
-        <div className="Main-Dishes">
+        <div className="main-Dishes">
           <h1 className="title">Main Dishes</h1>
           <img className="divider3" src={menuDivider} alt="divider3" />
           <PartOfMenu menu={MainList} />

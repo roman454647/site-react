@@ -8,18 +8,18 @@ import './style.scss';
 
 
 class Register extends Component {
-   constructor() {
-        super();
-        this.state = {
-            name: '',
-            email: '',
-            password: '',
-            password_confirm: '',
-            errors: {},
-        }
-        this.handleInputChange = this.handleInputChange.bind(this);
+  constructor() {
+    super();
+    this.state = {
+      name: '',
+      email: '',
+      password: '',
+      password_confirm: '',
+      errors: {},
+    };
+    this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    }
+  }
 
     componentDidMount() {
         if(this.props.auth.isAuthenticated) {

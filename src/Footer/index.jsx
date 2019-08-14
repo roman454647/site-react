@@ -8,7 +8,7 @@ import {
 const Footer = () => (
   <footer id="footer">
     <div className="info">
-      <div className="About-footer">
+      <div className="about-footer">
         <h1>About Us</h1>
         <img src={image5} alt="divider" />
         <p>
@@ -35,7 +35,7 @@ const Footer = () => (
           7:00am-10.00pm
         </p>
       </div>
-      <div className="Our-Location">
+      <div className="our-Location">
         <h1>Our Location</h1>
         <img src={image5} alt="divider" />
         <p>

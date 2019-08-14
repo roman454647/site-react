@@ -19,6 +19,13 @@
 }
 
 .left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  max-height: 80%;
+  padding: 100px 0 ;
+  margin-left: 0 auto;
+
   @media screen and (max-width: $max-md-screen) {
     align-items: center;
   }
@@ -31,12 +38,6 @@
   @media screen and (max-width: $max-xs-screen) {
     display: none;
   }
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  max-height: 80%;
-  padding: 100px 0 ;
-  margin-left: 0 auto;
 
   img {
     margin-left: 20px;
@@ -56,7 +57,7 @@
 
   h1 {
     margin-bottom: 20px;
-    margin-left: 80px;
+    margin-left: 0;
     font-size: 36px;
     color: $budha-gold;
   }

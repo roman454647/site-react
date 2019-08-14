@@ -42,10 +42,8 @@
     text-align: center;
 
     @media screen and (max-width: $max-md-screen) {
-      p {
-        font-size: 13px;
-        text-align: center;
-      }
+      font-size: 13px;
+      text-align: center;
     }
   }
 
@@ -79,15 +77,6 @@
   padding-top: 0;
   margin-left: 30%;
 }
-
-
-.About {
-  @media screen and (max-width: $max-md-screen) {
-    margin-left: 0;
-  }
-}
-
-
 
 .info {
   div {

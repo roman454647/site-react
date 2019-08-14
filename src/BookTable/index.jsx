@@ -5,7 +5,7 @@ import {
 }
   from '../variables/export-img';
 
-export default () => (
+const BookTable = () => (
   <section id="book" className="book-wrapper">
     <div className="book-form">
       <div className="left-side">
@@ -72,3 +72,5 @@ export default () => (
     </div>
   </section>
 );
+
+export default BookTable;

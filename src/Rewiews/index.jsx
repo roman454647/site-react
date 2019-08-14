@@ -4,7 +4,7 @@ import { divSlider } from '../variables/export-img';
 
 const Rewiews = () => (
   <section id="rewiews" className="wrapper-rewiews">
-    <div className="Rewiews">
+    <div className="rewiews">
       <div className="rewiew">
         <h1>Guest Reviews</h1>
         <img src={divSlider} alt="slider" />
