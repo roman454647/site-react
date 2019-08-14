@@ -4,18 +4,18 @@ const validateRegisterInput = require('../validation/register');
 
 const User = require('../models/User');
 
-exports.registerCallback = (req, res) =>{
+exports.registerCallback = (req, res) => {
 
 const {
    errors,
-   isValid
+   isValid,
  } = validateRegisterInput(req.body);
 
  if (!isValid) {
    return res.status(400).json(errors);
  }
  User.findOne({
-   email: req.body.email
+   email: req.body.email,
  }).then(user => {
    if (user) {
      return res.status(400).json({
@@ -31,7 +31,7 @@ const {
        name: req.body.name,
        email: req.body.email,
        password: req.body.password,
-       avatar
+       avatar,
      });
 
      bcrypt.genSalt(10, (err, salt) => {

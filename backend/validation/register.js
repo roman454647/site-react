@@ -2,7 +2,7 @@ const Validator = require('validator');
 const isEmpty = require('./is-empty');
 
 module.exports = function validateRegisterInput(data) {
-  let errors = {};
+  const errors = {};
   data.name = !isEmpty(data.name) ? data.name : '';
   data.email = !isEmpty(data.email) ? data.email : '';
   data.password = !isEmpty(data.password) ? data.password : '';
@@ -10,8 +10,8 @@ module.exports = function validateRegisterInput(data) {
 
   if (!Validator.isLength(data.name, {
     min: 2,
-    max: 30
-    })) {
+    max: 30,
+  })) {
     errors.name = 'Name must be between 2 to 30 chars';
   }
 
@@ -28,9 +28,9 @@ module.exports = function validateRegisterInput(data) {
   }
 
   if (!Validator.isLength(data.password, {
-      min: 6,
-      max: 30
-    })) {
+    min: 6,
+    max: 30,
+  })) {
     errors.password = 'Password must have 6 chars';
   }
 
@@ -39,9 +39,9 @@ module.exports = function validateRegisterInput(data) {
   }
 
   if (!Validator.isLength(data.password_confirm, {
-      min: 6,
-      max: 30
-    })) {
+    min: 6,
+    max: 30,
+  })) {
     errors.password_confirm = 'Password must have 6 chars';
   }
 
@@ -55,6 +55,6 @@ module.exports = function validateRegisterInput(data) {
 
   return {
     errors,
-    isValid: isEmpty(errors)
-  }
-}
+    isValid: isEmpty(errors),
+  };
+};

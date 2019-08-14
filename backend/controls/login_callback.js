@@ -7,51 +7,51 @@ const User = require('../models/User');
 
 const magicNumber = 3600;
 
-exports.loginCallback = (req, res) =>{
+exports.loginCallback = (req, res) => {
   const {
     errors,
-    isValid
+    isValid,
   } = validateLoginInput(req.body);
 
   if (!isValid) {
     return res.status(400).json(errors);
   }
 
-  const email = req.body.email;
-  const password = req.body.password;
+  const { email } = req.body;
+  const { password } = req.body;
 
   User.findOne({
-      email
-    })
-    .then(user => {
+    email,
+  })
+    .then((user) => {
       if (!user) {
-        errors.email = 'User not found'
+        errors.email = 'User not found';
         return res.status(404).json(errors);
       }
       bcrypt.compare(password, user.password)
-        .then(isMatch => {
+        .then((isMatch) => {
           if (isMatch) {
             const payload = {
               id: user.id,
               name: user.name,
-              avatar: user.avatar
-            }
+              avatar: user.avatar,
+            };
             jwt.sign(payload, 'secret', {
-              expiresIn: magicNumber
+              expiresIn: magicNumber,
             }, (err, token) => {
               if (err) console.error('There is some error in token', err);
               else {
                 res.json({
                   success: true,
-                  token: `Bearer ${token}`
+                  token: `Bearer ${token}`,
                 });
               }
             });
           } else {
-            console.log("incorrect password")
+            console.log('incorrect password');
             errors.password = 'Incorrect Password';
             return res.status(400).json(errors);
           }
         });
     });
-}
+};

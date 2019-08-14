@@ -14,6 +14,7 @@ class Navbar extends Component {
   }
   render() {
         const {isAuthenticated, user} = this.props.auth;
+
         const authLinks = (
             <Fragment>
               <a href=""  onClick={this.onLogout.bind(this)}>
@@ -35,9 +36,9 @@ class Navbar extends Component {
 
       const navbarElements =  navbarElement.map(element =>
         <a href ={element.page_name}>{element.name}</a>
-    );
+  );
 
-        return(
+    return (
   <header>
       <div className="header-logo">
        <img src={logo} alt="header-logo" />
@@ -57,8 +58,8 @@ Navbar.propTypes = {
     auth: PropTypes.object.isRequired
 }
 
-const mapStateToProps = (state) => ({
-    auth: state.auth
+const mapStateToProps = state => ({
+  auth: state.auth
 })
 
 export default connect(mapStateToProps, { logoutUser })(withRouter(Navbar));
