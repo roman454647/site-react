@@ -1,7 +1,5 @@
 import React from 'react';
 import './style.scss';
-import btnBlack from '../image/button-black.png';
-import btnWhite from '../image/Button White.png';
 
 const Promo = () => (
   <section className="promo">
@@ -16,7 +14,6 @@ const Promo = () => (
         type="button"
         className="book-table"
         name="book-table"
-        src={btnBlack}
         alt="book-table"
       >
       Book table
@@ -25,7 +22,6 @@ const Promo = () => (
         type="button"
         className="see-all-dishes"
         name="see-all-dishes"
-        src={btnWhite}
         alt="see-all-dishes"
       >
       See all dishes

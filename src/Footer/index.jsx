@@ -1,7 +1,9 @@
 import React from 'react';
 import './style.scss';
-import image5 from '../image/image5.png';
-import icons from '../image/icons-foo.png';
+import {
+  image5, icons,
+}
+  from '../variables/export-img';
 
 const Footer = () => (
   <footer id="footer">

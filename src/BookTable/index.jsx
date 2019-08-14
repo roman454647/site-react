@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.scss';
-import image3 from '../image/image3.png';
-import image4 from '../image/image4.png';
-import divider4 from '../image/Divider4.png';
-import bookNow from '../image/Book now.png';
+import {
+  image3, image4, divider4, bookNow,
+}
+  from '../variables/export-img';
 
 export default () => (
   <section id="book" className="book-wrapper">

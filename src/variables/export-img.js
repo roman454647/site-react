@@ -1,0 +1,23 @@
+import cookImg from '../image/cook.png';
+import divider from '../image/Divider.png';
+import dish from '../image/dish.png';
+import image3 from '../image/image3.png';
+import image4 from '../image/image4.png';
+import divider4 from '../image/Divider4.png';
+import bookNow from '../image/Book now.png';
+import image5 from '../image/image5.png';
+import icons from '../image/icons-foo.png';
+import menuDivider from '../image/menu-divider.png';
+import divSlider from '../image/Divslider.png';
+
+export { cookImg };
+export { divider };
+export { dish };
+export { image3 };
+export { image4 };
+export { divider4 };
+export { bookNow };
+export { image5 };
+export { icons };
+export { menuDivider };
+export { divSlider };

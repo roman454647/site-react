@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import menuDivider from '../image/menu-divider.png';
+import { menuDivider } from '../variables/export-img';
 import SalatList from './SalatList';
 import StarterList from './StartersList';
 import AppetisersList from './AppetisersList';

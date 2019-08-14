@@ -15,11 +15,29 @@ class Register extends Component {
             email: '',
             password: '',
             password_confirm: '',
-            errors: {}
+            errors: {},
         }
         this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    componentDidMount() {
+        if(this.props.auth.isAuthenticated) {
+            this.props.history.push('/');
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if(nextProps.auth.isAuthenticated) {
+            this.props.history.push('/')
+        }
+        if(nextProps.errors) {
+            this.setState({
+                errors: nextProps.errors
+            });
+        }
+    }
+
 
     handleInputChange(e) {
         this.setState({
@@ -38,22 +56,6 @@ class Register extends Component {
         this.props.registerUser(user, this.props.history);
     }
 
-    componentWillReceiveProps(nextProps) {
-        if(nextProps.auth.isAuthenticated) {
-            this.props.history.push('/')
-        }
-        if(nextProps.errors) {
-            this.setState({
-                errors: nextProps.errors
-            });
-        }
-    }
-
-    componentDidMount() {
-        if(this.props.auth.isAuthenticated) {
-            this.props.history.push('/');
-        }
-    }
 
     render() {
         const { errors } = this.state;
@@ -66,7 +68,7 @@ class Register extends Component {
         const confirmPassword = classnames('form-control form-control-lg', {
             'is-invalid': errors.password_confirm
         });
-        
+
         return(
         <div className="container">
             <h2>Registration</h2>

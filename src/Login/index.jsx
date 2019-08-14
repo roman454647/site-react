@@ -7,30 +7,15 @@ import { loginUser } from '../actions/authentication';
 import './style.scss';
 
 class Login extends Component {
-   constructor() {
-        super();
-        this.state = {
-            email: '',
-            password: '',
-            errors: {}
+  constructor() {
+    super();
+    this.state = {
+      email: '',
+      password: '',
+      errors: {}
         }
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    handleInputChange(e) {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
-
-    handleSubmit(e) {
-        e.preventDefault();
-        const user = {
-            email: this.state.email,
-            password: this.state.password,
-        }
-        this.props.loginUser(user);
     }
 
     componentDidMount() {
@@ -50,12 +35,28 @@ class Login extends Component {
         }
     }
 
+
+    handleInputChange(e) {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const user = {
+            email: this.state.email,
+            password: this.state.password,
+        }
+        this.props.loginUser(user);
+    }
+
     render() {
-        const {errors} = this.state;
+        const { errors } = this.state;
         const formControlEmail = classnames('form-control form-control-lg', {
           'is-invalid': errors.password
         })
-        const formControlPassword =classnames('form-control form-control-lg', {
+        const formControlPassword = classnames('form-control form-control-lg', {
             'is-invalid': errors.password
         })
 
@@ -108,9 +109,9 @@ Login.propTypes = {
     errors: PropTypes.object.isRequired
 }
 
-const mapStateToProps = (state) => ({
-    auth: state.auth,
-    errors: state.errors
-})
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors,
+});
 
-export  default connect(mapStateToProps, { loginUser })(Login)
+export default connect(mapStateToProps, { loginUser })(Login)

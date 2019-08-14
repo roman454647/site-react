@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import divSlider from '../image/Divslider.png';
+import { divSlider } from '../variables/export-img';
 
 const Rewiews = () => (
   <section id="rewiews" className="wrapper-rewiews">

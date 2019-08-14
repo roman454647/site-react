@@ -1,8 +1,6 @@
 import React from 'react';
 import './style.scss';
-import divider from '../image/Divider.png';
-import cookImg from '../image/cook.png';
-import dish from '../image/dish.png';
+import { cookImg, divider, dish } from '../variables/export-img';
 
 const About = () => (
   <section id="about" className="wrapper-about">
