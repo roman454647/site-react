@@ -1,0 +1,63 @@
+@import '../variables/_variables.scss';
+
+header {
+  display: flex;
+  width: 100%;
+  margin-left: 0;
+}
+
+.header-logo {
+  margin-top: 4px;
+  margin-left: 20%;
+}
+
+nav {
+  margin-top: 46px;
+  margin-left: 12%;
+
+  @media screen and (max-width: $max-sm-screen) {
+    width: 100%;
+  }
+}
+
+.avatar {
+  width: 25px;
+  margin-right: 5px;
+}
+
+.navigation {
+  a {
+    padding: 22px 24px;
+    font-family: serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $white;
+    text-align: center;
+
+    &:hover {
+      border-top: 3px solid $ash;
+  }
+
+    @media screen and (max-width: $max-sm-screen) {
+      display: none;
+
+    }
+}
+
+  .responsive {
+    @media screen and (max-width: $max-sm-screen) {
+      position: relative;
+      top: 50px;
+      left: -200px;
+      height: 340px;
+   }
+
+    a {
+      @media screen and (max-width: $max-sm-screen) {
+        display: block;
+        float: none;
+        text-align: left;
+    }
+   }
+}
+}

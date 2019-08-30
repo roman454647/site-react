@@ -1,0 +1,105 @@
+@import '../variables/_variables.scss';
+
+.wrapper-menu {
+  background: fixed url('../image/menu-bg.png') no-repeat center center / cover;
+}
+
+.section-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 75%;
+  padding: 80px 0 100px;
+  margin: 0 auto;
+
+
+
+  @media screen and (max-width: $max-sm-screen) {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+
+  img {
+    margin-left: 0;
+  }
+
+  .divider3 {
+    justify-content: center;
+    padding-top: 0;
+    margin-left: 25%;
+    }
+
+  .title {
+    font-size: 2rem;
+    color: $budha-gold;
+    text-align: center;
+  }
+
+
+  .special {
+    height: 70%;
+    margin-top: 0;
+    text-align: center;
+    border: 2px solid $budha-border;
+  }
+
+  h1 {
+    padding-top: 5px;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: $budha-gold;
+  }
+
+  .price {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  h2 {
+    margin-top: -20px;
+    margin-left: 80%;
+    font-size: 4 / 5rem;
+    color: $white;
+    background-image: url('../image/spec.png');
+  }
+
+  p {
+    padding: 5px;
+    font-size: 1rem;
+  }
+}
+
+
+
+.price {
+  margin-right: 0;
+}
+
+.salads {
+  padding-top: 75px;
+}
+
+.dishes {
+  padding-top: 70px;
+}
+
+
+.right-part {
+  margin-left: 100px;
+  @media screen and (max-width: $max-sm-screen) {
+    padding-top: 20px;
+    margin-left: 0;
+  }
+}
+
+.section-ingredients {
+  .divider3 {
+    @media screen and (max-width: $max-sm-screen) {
+      margin-left: 0;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,792 @@
+*{
+  margin:0px;
+  padding: 0px;
+}
+
+a{
+  text-decoration:none;
+}
+li{
+  list-style:none;
+}
+@font-face {
+  font-family: 'yeseva';
+  src: url('font/YesevaOne-Regular.tff')
+}
+@font-face {
+  font-family: 'lato';
+  src: url('font/LatoBold.tff')
+}
+@font-face {
+  font-family: 'gentium';
+  src: url('font/GentiumBookBasic-Bol.tff')
+}
+
+/*HEADER*/
+header{
+  margin-left: 0%;
+  width:100%;
+  display:flex;
+}
+.header_logo{
+
+   margin-left: 17%;
+   margin-top:4px;
+
+}
+/*NAVIGATION*/
+nav{
+  margin-top: 46px;
+  margin-left: 12%;
+}
+
+.navigation a{
+  color: #ffffff;
+  text-align:center;
+  padding: 22px 24px;
+  font-size: 21px;
+  font-family: serif;
+  font-weight:bold;
+}
+
+
+.navigation a:hover{
+  border-top:3px solid #c6c3b9;
+}
+.navigation .span-logo:hover{
+  filter:sepia(1);
+}
+
+.navigation a.span-logo{
+  padding-left:10px;
+}
+
+.navigation .icon{
+  color: #ffffff;
+  display:none;
+}
+.container{
+
+  background-image: url("image/Bg2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+/*PROMO*/
+}
+.promo{
+   display: flex;
+
+   flex-direction:column;
+   flex-wrap:wrap;
+   width:100%;
+   text-align: center;
+   padding:10px 0 100px 0;
+}
+.promo h1{
+  text-align: center;
+  color: #ffffff;
+  font-family: yeseva;
+  font-size:100px;
+  font-weight: bold;
+
+}
+.promo .buttons{
+  margin-left:0%;
+  margin-top: 3px;
+  margin-bottom:33px;
+  max-width:100%;
+}
+
+.promo .buttons input{
+  padding:0px 15px;
+}
+.promo img{
+  max-width:100%;
+  justify-content:center;
+  padding: 25px;
+}
+
+.promo .buttons .black:hover{
+  opacity: 0.3;
+
+}
+
+.promo .buttons .white:hover{
+  opacity: 0.3;
+
+}
+
+/*ABOUT*/
+.wrapper{
+
+  background-image: url("image/bg_about.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+
+}
+
+main .section-about{
+  width:70%;
+  margin:0 auto;
+  display:flex;
+  padding: 60px 0 20px 0;
+}
+
+main .about-right{
+   margin-left :2%;
+}
+.about-left{
+  margin-left: 11%;
+  margin-top: 35px
+}
+.about-left h1{
+  font-family: yeseva;
+  font-size: 36px;
+
+  text-align: center;
+  color:#cc9900;
+  padding-bottom: 13px;
+
+}
+.about-left p{
+  font-family:lato;
+  line-height: 2;
+  font-size: 16px;
+  margin: 30px 0 50px 0;
+  text-align: center;
+}
+.mw-100{
+  min-width: 100%;
+}
+main img{
+margin-left: 21%;
+text-align:center;
+}
+.cook{
+  padding-top: 18px;
+  margin-left: 33%;
+}
+
+/*INGREDIENTS*/
+.wrapper-ingredients{
+
+  background-image: url("image/bg3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+.section-ingredients{
+
+  background-image: url("image/bg4.png");
+  background-repeat: no-repeat;
+  background-position: 73% ;
+  padding-top: 170px;
+  padding-bottom: 150px;
+
+}
+.section-ingredients h1{
+
+
+  font-family: 'yeseva';
+  font-size: 36px;
+  padding-bottom: 17px;
+  color:#ffffff;
+  margin-left: 59.5%;
+}
+.divider2{
+
+  margin-left: 60%;
+  max-width:100%;
+  justify-content:center;
+
+}
+
+
+.section-ingredients p{
+  font-family: lato;
+  line-height: 1.5;
+  font-size: 16px;
+  padding-top: 30px;
+  color: #ffffff;
+  margin-left: 55%;
+
+}
+
+.product_image{
+ padding-top: 80px;
+ margin-left:55%;
+
+
+}
+
+.product_image img{
+   padding-left: 15px;
+   margin-left: 0px;
+
+}
+
+
+
+
+
+
+
+/*MENU*/
+
+
+.wrapper-menu{
+  background-image: url("image/menu-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+main .section-menu{
+  width:75%;
+  margin:0 auto;
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  padding:80px 0 100px 0;
+
+
+}
+
+main .section-menu img{
+  margin-left: 0%;
+
+}
+
+main .section-menu .divider3{
+  margin-left: 0%;
+  padding-top: 15px;
+
+}
+
+main .section-menu .tittle{
+  text-align: center;
+  font-family: yeseva;
+  font-size: 36px;
+  color:#cc9900;
+}
+
+main .section-menu .divider3{
+   margin-left: 23%
+}
+
+
+main .price{
+  margin-right: 0%;
+
+
+}
+
+
+main .section-menu .special {
+  margin-top: 15px;
+  height: 70%;
+  border: 2px solid rgba(204,153,0,0.3)  ;
+  line-height: 20px;
+
+
+}
+
+main .Salads{
+  padding-top: 75px;
+}
+
+main .Main-Dishes{
+  padding-top: 70px;
+}
+
+main .section-menu h1{
+  margin-left:10px;
+  padding-top: 17px;
+  font-family: ;
+  font-size:21px;
+  color:#cc9900;
+
+}
+main .section-menu .price{
+  text-align: right;
+  margin-right: auto;
+  float: right;
+}
+
+main .section-menu h2{
+  font-size:12px;
+  margin-top: -20px;
+  margin-left:92%;
+  background-image:url('image/spec.png');
+  color: #ffffff;
+}
+main .section-manu p{
+  font-family: lato;
+  padding-top: 10px;
+  font-size:16px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+
+main .right-part{
+  margin-left: 170px;
+
+
+}
+
+
+/*REWIEWS*/
+
+main .wrapper-rewiews{
+  background-image: url("image/bg_slider.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+}
+
+main .Rewiews{
+  background-image: url("image/bg6_slider.png");
+  width:100%;
+  background-position:center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 100px;
+  margin-left: 27%;
+}
+
+main  .rewiew{
+  color:#ffffff;
+  padding-top: 78px;
+  padding-bottom: 100px;
+}
+
+.rewiew img{
+  margin-left: 0%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.rewiew h1{
+  font-family: yeseva;
+   font-size: 36px;
+}
+
+.rewiew p{
+  line-height: 2;
+  font-family: gentium;
+  font-size: 25px;
+  padding-bottom: 50px;
+
+}
+
+ .rewiew h2{
+   font-size: 18px;
+ }
+
+
+
+/*BOOK FORM*/
+
+.book_wrapper{
+  background-image: url("image/form-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+
+.book_form{
+  display: flex;
+  margin:0 auto;
+  padding-bottom: 30px;
+}
+.left-side{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 120px 0 100px 0;
+  margin-left:17.5%;
+}
+.left-side img{
+  margin-left: 30px;
+}
+.right-side{
+  display:flex;
+  flex-direction: column;
+  margin-left:100px;
+  padding: 120px 0 100px 0;
+
+}
+
+.right-side h1 p img{
+   text-align: center;
+}
+.right-side h1{
+  font-weight: yeseva;
+  margin-left: 80px;
+  font-size: 36px;
+  margin-bottom: 20px;
+  color:#cc9900;
+}
+.right-side p {
+  font-style: gentium;
+  line-height:1.3;
+   font-size: 18px;
+   text-align: center;
+   margin-bottom: 10px;
+}
+
+.right-side img{
+   margin-left:80px;
+   width:60%;
+   margin-bottom: 30px;
+}
+
+.button_block{
+  display:flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: -20px
+}
+
+input{
+  width:200px;
+  height:36px;
+  font-size:10px;
+
+  margin-bottom: 18px;
+
+}
+.form_inputs{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  font-size: 14px;
+}
+.form_inputs p{
+  color:#c9a131;
+  text-align: left;
+  margin-left: 0px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+
+
+}
+
+.left_inputs{
+  margin-left: 40px;
+
+}
+
+input[type=text]:focus {
+  outline: : 3px solid #c9a131;
+}
+input[placeholder]{
+  font-family: cursive;
+  font-size: 18px;
+}
+
+
+
+/*FOOTER*/
+
+.wrapper_foot{
+  background-image: url("image/background-foo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.info{
+  display: flex;
+
+  text-align: center;
+  padding: 50px 60px 70px 60px;
+}
+
+.info h1 {
+  font-family: yeseva;
+  font-size: 21px;
+  font-weight: bold;
+  color:#ffffff;
+  margin-bottom: 20px;
+}
+
+.info p{
+  line-height: 1.5;
+  font-size: 16px;
+  color:#ffffff;
+  margin-top: 20px;
+
+}
+.About{
+  margin-left: 18.5%
+}
+.open{
+  margin-left:160px;
+}
+.Our-Location{
+  margin-left: 190px;
+
+}
+.Our-Location{
+  margin-left: 190px;
+
+}
+
+.Our-Location img{
+  margin-top: 10px;
+}
+
+.Our-Location h1{
+  margin-bottom: 10px;
+}
+.info span{
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+/*MEDIAQUERY*/
+
+@media screen and (max-width:1660px){
+  .section-ingredients{
+  background-position: 80% ;
+  }
+
+
+
+
+
+
+@media screen and (max-width:1414px){
+  nav{
+    margin-left:7%;
+  }
+  .section-ingredients{
+  background-position: 83% ;
+  }
+  .book_form .left-side{
+     align-items: center;
+     margin-left: 0%
+   }
+.About{
+  margin-left: 0px;
+}
+
+}
+
+@media screen and (max-width:1332px){
+  nav{
+    margin-left: 4%;
+  }
+
+
+
+}
+
+
+@media screen and (max-width:1278px){
+  .navigation a{
+    display:none;
+  }
+
+  .navigation a.icon{
+    color: #ffffff;
+    float:right;
+    margin-top:-29px;
+    display:block;
+    color:#000000;
+    font-size:25px;
+  }
+  nav{
+    width:100%;
+  }
+  .navigation.responsive{
+    position:relative;
+    top:50px;
+    left:-200px;
+  }
+  header .navigation.responsive{
+    height:340px:
+  }
+  .navigation.responsive a.icon{
+    color: #ffffff;
+    position: absolute;
+    top:-50px;
+    right:-200px;
+  }
+  .navigation.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+
+
+
+  .mw-100{
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .section-about{
+    flex-direction: column-reverse;
+  }
+  .about-left{
+    margin-left: 0%;
+    text-align: center;
+  }
+  .about-right{
+    margin-left: 0%;
+    text-align: center;
+  }
+  main img{
+    margin-left: 0%
+
+  }
+  .cook{
+    margin-left: 12%;
+  }
+  .section-ingredients{
+    background-position: center;
+  }
+.section-ingredients .divider2{
+  text-align: center;
+  margin-left: 0% ;
+}
+.section-ingredients p{
+  text-align: center;
+  padding-left: 3px;
+  margin-left: 0% ;
+}
+  .section-ingredients h1{
+    text-align: center;
+    margin-left: 0% ;
+  }
+  .wrapper-ingredients div{
+    text-align: center;
+    margin:0%;
+
+  }
+
+
+main  .section-menu{
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+  }
+.section-ingredients .divider3{
+  margin-left: 0px;
+  text-align: center;
+
+
+}
+
+main .right-part{
+  margin-left:0px;
+  padding-top:20px;
+}
+
+
+
+main .Rewiews{
+
+  display:flex;
+  justify-content: center;
+  margin-left: 10%;
+}
+main .rewiew{
+  text-align: center;
+  margin-left: 0%;
+}
+
+
+
+.book_form .left_side{
+  max-width: 70%;
+  
+}
+
+.book_form .right-side{
+  padding: 0 100px 0;
+  margin-left: 0px;
+}
+
+.book_form{
+ display: flex;
+ flex-direction: column;
+ margin:0 auto;
+ padding-bottom: 30px;
+ align-items: center;
+}
+
+
+.info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-left: 0px;
+}
+
+
+ .About p{
+   font-size: 13px;
+   text-align: center;
+ }
+ .info div{
+   margin-left: 0px;
+ }
+}
+
+
+
+@media screen and (max-width:900px) {
+  main .wrapper-rewiews{
+    text-align: center;
+    margin-left: 0%;
+  }
+  main .Rewiews{
+    background-position: center;
+    display:flex;
+   justify-content: center;
+    margin-left: 0%
+  }
+  .Rewiews .rewiew{
+    text-align: center;
+    margin-left: 0%;
+  }
+
+  .mv-100{
+    width:60%;
+  }
+}
+@media screen and(max-width:660px){
+  #left_inputs{
+    justify-content: center;
+     margin-left: 0px;
+  }
+}

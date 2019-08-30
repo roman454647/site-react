@@ -1,0 +1,87 @@
+@import '../variables/_variables.scss';
+
+.wrapper-about {
+  background: fixed url('../image/bg_about.png') no-repeat center center / cover;
+}
+
+.section-about {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  padding: 20px 60px;
+
+
+  @media screen and (max-width: $max-md-screen) {
+    flex-direction: column-reverse;
+}
+}
+
+.about-right {
+  margin-left: 5%;
+
+  @media screen and (max-width: $max-md-screen) {
+    justify-content: center;
+  }
+}
+
+.about-left {
+  margin-top: 35px;
+  margin-left: 11%;
+
+  h1 {
+    padding-bottom: 0;
+    font-size: 4rem;
+    color: $budha-gold;
+    text-align: center;
+  }
+
+  p {
+    margin: 30px 0 50px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+
+    @media screen and (max-width: $max-md-screen) {
+      font-size: 13px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: $max-md-screen) {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.dish-plate {
+  min-width: 100%;
+  padding-top: 100px;
+  margin-left: 40px;
+
+  @media screen and (max-width: $max-sm-screen) {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: $max-xs-screen) {
+    width: 60%;
+  }
+}
+
+.divider {
+  margin-left: 20%;
+  text-align: center;
+}
+
+.cook {
+  padding-top: 0;
+  margin-left: 30%;
+}
+
+.info {
+  div {
+    @media screen and (max-width: $max-md-screen) {
+      margin-left: 0;
+     }
+    }
+  }

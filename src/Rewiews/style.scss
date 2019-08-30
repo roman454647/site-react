@@ -1,0 +1,67 @@
+@import '../variables/_variables.scss';
+
+.wrapper-rewiews {
+  background: fixed url('../image/bg_slider.png') no-repeat center center / cover;
+
+  @media screen and (max-width: $max-xs-screen) {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.rewiews {
+  max-width: 900px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-left: 30%;
+  text-align: center;
+  background:  url('../image/bg6_slider.png') no-repeat center;
+
+  @media screen and (max-width: $max-sm-screen) {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+  }
+
+  @media screen and (max-width: $max-xs-screen) {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    background-position: center;
+  }
+}
+
+.rewiew {
+  padding-top: 78px;
+  padding-bottom: 100px;
+  color: $white;
+
+  @media screen and (max-width: $max-sm-screen) {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  img {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    padding-bottom: 50px;
+    font-size: 1.5rem;
+    line-height: 2;
+
+    @media screen and (max-width: $max-xs-screen) {
+      font-size: 1rem;
+    }
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+}

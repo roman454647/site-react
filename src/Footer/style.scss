@@ -1,0 +1,65 @@
+@import '../variables/_variables.scss';
+
+.info {
+  display: flex;
+  padding: 50px 60px 70px;
+  text-align: center;
+  background: fixed url('../image/background-foo.png') no-repeat center center / cover;
+
+
+  @media screen and (max-width: $max-sm-screen) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 0;
+    text-align: center;
+}
+
+  h1 {
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: bold;
+    color: $white;
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $white;
+
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.about-footer {
+  margin-left: 25%;
+}
+
+.open {
+  margin-left: 100px;
+}
+
+.our-Location {
+  margin-left: 100px;
+
+  img {
+    margin-top: 10px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.About {
+  p {
+    @media screen and (max-width: $max-sm-screen) {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}
